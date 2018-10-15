@@ -14,7 +14,7 @@ namespace MyNewSite.Controllers
 {
     [Authorize]
     public class AccountController : Controller
-    {
+    {qwqwewew
         public AccountController()
             : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
         {
