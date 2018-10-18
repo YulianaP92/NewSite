@@ -4,42 +4,73 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title – приложение ASP.NET</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
+    <title>@*@ViewBag.Title –*@ Fishing magazine</title>
+    @*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
+    <style>
+        body {
+            background: url(Content/images/2m3rzX.jpg);
+            padding: 0;
+        }
+         .center-align {
+             display: block;
+             margin: auto;
+         }
+        .text {
+            text-align: center;
+            font-size: 150%;
+            font-family: 'Times New Roman',fantasy;
+            font-weight: bold;
+        }
+        button {
+            border: none;
+            width: calc(30% / 4);
+            height: 40px;
+            background: linear-gradient(180deg, #00008B,#4169E1, #1E90FF, #87CEFA);
+            border-radius: 40px;
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Имя приложения", "Index", "Home", null, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                    <li>@Html.ActionLink("О программе", "About", "Home")</li>
-                    <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+<div>
+    <button>about us</button>
+    <button>contacts</button>
+    <button>addresses</button>
+    <button>categories</button>
+</div>
+@*<div><img class="center-align" src="Content/images/2m3rzX.jpg" title="Internet-Magazine" width="500" height="500">
+</div>*@
+<div style="width: 600px; height: 580px; margin-left: calc(100% / 3); margin-top: 30px">
+    <p class="text">Welcome to our website!<br/> Here you can find a lot of interesting things for fishing.</p>
+</div>
+@*<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Имя приложения", "Index", "Home", null, new {@class = "navbar-brand"})
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
+                <li>@Html.ActionLink("О программе", "About", "Home")</li>
+                <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+</div>*@ 
+<div class="container body-content">
+    @RenderBody()
+    <footer style="border: none; margin-bottom: 8px">
+        <p>&copy; 2018 – fishing online store<img src="~/Content/images/fish.jpg" style="width: 30px;height: 30px"></p>
+    </footer>
+</div>
+@*@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)*@
 </body>
 </html>
